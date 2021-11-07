@@ -6,9 +6,10 @@
   border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
+
 .p-browser {
   height: 20px;
-  background: rgb(243,242,242);
+  background: rgb(243, 242, 242);
   display: flex;
   align-items: center;
 }
@@ -19,4 +20,20 @@
   background: white;
   border-radius: 50%;
   margin: 3px;
+}
+
+.p-img {
+  width: 100%;
+  transition: all 10s ease;
+}
+
+.p:hover .p-img {
+  transform: translateY(-100%);
+}
+
+@media screen and (max-width: 480px) {
+  .p {
+    width: 40%;
+    height: 20vh;
+  }
 }

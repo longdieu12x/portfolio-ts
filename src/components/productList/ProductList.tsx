@@ -1,7 +1,9 @@
 import React from "react";
 import Product from "../product/Product";
 import "./ProductList.css";
+import { products } from "src/data";
 const ProductList: React.FC<{}> = () => {
+  console.log(products);
   return (
     <div className="pl">
       <div className="pl-texts">
@@ -13,12 +15,9 @@ const ProductList: React.FC<{}> = () => {
         </p>
       </div>
       <div className="pl-list">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {products.map(product => (
+          <Product key={product.id} img={product.img} link={product.link} />
+        ))}
       </div>
     </div>
   );
